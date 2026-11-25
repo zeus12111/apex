@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apex Trio Digital Partners: social media, websites and AI search in Panglao, Bohol</title>
+<meta name="description" content="A three-person studio in Panglao that runs social media, builds websites and gets Bohol businesses found on Google and in AI answers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Apex Trio Digital Partners: marketing for Bohol businesses">
+<meta property="og:description" content="Social media, websites, AI search and automation from a studio in Panglao, Bohol.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#e6dbc7">
+<!-- <link rel="canonical" href="https://[the client's domain]/"> : add once the domain is connected -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #e6dbc7; --p-surface: #ddd0b9; --p-ink: #062b8a; --p-muted: #3253a4;
+  --p-accent: #062b8a; --p-accent-ink: #e6dbc7; --p-action: #062b8a; --p-action-ink: #e6dbc7;
+  --p-inv-bg: #062b8a; --p-inv-surface: #153a90; --p-inv-ink: #e6dbc7; --p-inv-muted: #aab0bc;
+  --p-inv-accent: #e6dbc7; --p-inv-accent-ink: #062b8a; --p-inv-action: #e6dbc7; --p-inv-action-ink: #062b8a;
+  --font-display: "Hanken Grotesk", system-ui, sans-serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.038em;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js">
+<style>
+  /* page CSS: the team rows on the inverse ground and the split photographs' heights */
+  #team .rows__name { color: var(--ink); }
+  .split-photo { aspect-ratio: 4 / 3; }
+  #start .split-photo { aspect-ratio: 3 / 2; margin-top: var(--s-7); }
+  @media (min-width: 640px) and (max-width: 1023px) { .closing__cta.close--type > .btn--xl:not(.btn--wide) { width: 100%; } }
+  .plans .rows__name { font-size: var(--t-h3); font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: -0.02em; }
+  .plans > li { padding-block: var(--s-6); }
+  /* on a phone a split grows with what it holds: its photograph keeps a 4:3 frame under the words */
+  @media (max-width: 639px) {
+    #services > .wrap > .grid.fill { flex: none; height: auto; }
+    #services .frame--fill { flex: none; height: auto; aspect-ratio: 4 / 3; }
+    /* team and the form: two phone screens, the words on the first, the photograph or the form on the second */
+    #team > .wrap > .grid, #start > .wrap > .grid { display: contents; }
+    #team .frame--fill { height: 100%; min-height: 0; }
+    #start .span-5 { display: flex; flex-direction: column; }
+    #start .split-photo { margin-top: var(--s-5); flex: 1 1 auto; aspect-ratio: auto; min-height: 280px; }
+  }
+  @media (min-width: 1024px) and (max-width: 1279px) { #services { --h: 2 } }
+  /* the steps rest unpinned below 1024: hold them at exactly two screens so the sections after stay on the screen grid */
+  /* below 1024 the steps rest unpinned: one screen, the first step's photograph only */
+  @media (max-width: 1023px) {
+    main > #process[data-moment]:not(.is-live) { height: 100svh; min-height: 0; }
+    #process:not(.is-live) .mo-pc__step:not(:first-child) .mo-pc__visual { display: none; }
+  }
+  @media (max-width: 639px) { main > #process[data-moment]:not(.is-live) { height: 100lvh; } }
+  @media (max-width: 379px) { main > #process[data-moment]:not(.is-live) { height: auto; min-height: 100lvh; } }
+  @media (min-width: 1024px) and (max-width: 1279px) { #services .frame--fill { height: auto; max-height: 708px; align-self: start; aspect-ratio: 3 / 4; } }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .plans > li { padding-block: var(--s-4); }
+    #services .grid.fill > .frame--fill { min-height: 160px; }
+    /* the form on tablets: the words and photograph on the first screen, the form on the second */
+    #start { --h: 2; }
+    #start > .wrap { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); row-gap: calc(var(--padt) + var(--padb)); }
+    #start > .wrap > .grid { display: contents; }
+    #start .span-5 { display: flex; flex-direction: column; }
+    #start .split-photo { flex: 1 1 auto; aspect-ratio: auto; min-height: 280px; }
+  }
+</style>
+</head>
+<body>
+<!-- type: service (an agency: people are hired)
+     deal: hero photo (data-calm right, box), nav nav-split, close close-type, footer footer-columns, rhythm dark-band (#team),
+           buttons solid, mark initial, palette cobalt-on-sand (second of three: the first, a cool putty grey, fought the warm
+           sand and turquoise of the Panglao photographs; sand ground and sea-navy ink are the island's own two colours),
+           type hanken, radius soft, grounds none (kind other)
+     moments: word-highlight in #approach (the working rule, read word by word), pinned-chapters in #process (three steps)
+     screens at 1440x900: hero 1, services 1, approach 1, process 2, packages 1, team 1, start 1, closing 1 -->
+
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#services">Services <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-3" href="services/social-media-marketing/">
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f166956983-500.webp" width="500" height="375" alt="Outrigger boats on Panglao sand at sunset" data-source="stand-in" data-subject="stand-in"></div>
+              <span class="t-card">Social media</span>
+              <span class="t-small muted">Posts, reels and replies</span>
+            </a>
+            <a class="menu-card span-3" href="services/website-design-development/">
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f68305589-500.webp" width="500" height="375" alt="A long bamboo house with a thatched roof among trees" data-source="stand-in" data-subject="stand-in"></div>
+              <span class="t-card">Websites</span>
+              <span class="t-small muted">Mobile-first, easy to contact</span>
+            </a>
+            <a class="menu-card span-3" href="services/ai-search-digital-visibility/">
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f129074997-500.webp" width="500" height="375" alt="The Panglao coastline and Alona Beach seen from the air" data-source="stand-in" data-subject="stand-in"></div>
+              <span class="t-card">AI search</span>
+              <span class="t-small muted">Google and AI answers</span>
+            </a>
+            <a class="menu-card span-3" href="services/automation-integrations/">
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f725343-500.webp" width="500" height="375" alt="A tricycle taxi parked on a village road in Panglao" data-source="stand-in" data-subject="stand-in"></div>
+              <span class="t-card">Automation</span>
+              <span class="t-small muted">CRM, posting and follow-up</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#process">Process</a></div>
+      <div class="nav__item"><a class="nav__link" href="#packages">Packages</a></div>
+      <div class="nav__item"><a class="nav__link" href="about/">About</a></div>
+    </nav>
+    <a class="nav__logo" href="#top"><span class="mark mark--initial" aria-hidden="true">A</span>Apex Trio</a>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#start">Start a project</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--photo" data-enter data-calm="right" aria-labelledby="hero-h">
+    <picture class="hero__bg" data-phone-fill><source media="(max-width: 639px)" srcset="assets/img/photo-f82281801-780x975.webp 780w" sizes="100vw"><img src="assets/img/photo-f82281801.webp" srcset="assets/img/photo-f82281801-500.webp 500w, assets/img/photo-f82281801-960.webp 960w, assets/img/photo-f82281801-1280.webp 1280w, assets/img/photo-f82281801.webp 1920w" sizes="100vw" width="1920" height="1280" alt="White sand and clear turquoise water at Alona Beach, Panglao" style="--ly-pos: 30% 50%; --ly-pos-phone: 30% 50%" fetchpriority="high" decoding="async" data-source="stand-in" data-subject="stand-in"></picture>
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Social media &amp; websites in Bohol</h1>
+        <p class="hero__lead">We run your Facebook and Instagram, build your website and get you listed on Google and in AI answers. Three people, based in Panglao.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#start">Start a project<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#services">See the services</a>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="services" style="--hm: 2" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="grid grid--top fill" data-peek>
+        <div class="span-5 stack-6">
+          <div class="section-head">
+            <h2 id="services-h">Four services for local businesses. <span class="muted">Start with one.</span></h2>
+          </div>
+          <ul class="rows">
+            <li data-peek-to="social" tabindex="0"><span class="rows__name">Social media marketing</span><span class="rows__value">12 to 20 posts a month</span><p>A content calendar, posts and reels, replies to your comments and a monthly report.</p></li>
+            <li data-peek-to="web" tabindex="0"><span class="rows__name">Website design and development</span><span class="rows__value">Mobile first</span><p>Sites that make you easy to understand and easy to contact. You edit the content.</p></li>
+            <li data-peek-to="search" tabindex="0"><span class="rows__name">AI search and visibility</span><span class="rows__value">Google and AI</span><p>Listings, reviews and pages set up so search engines and AI assistants can recommend you.</p></li>
+            <li data-peek-to="auto" tabindex="0"><span class="rows__name">Automation and integrations</span><span class="rows__value">CRM and email</span><p>Auto-posting, a CRM and inquiry follow-up, so new leads get an answer while you work.</p></li>
+          </ul>
+          <p><a class="link" href="services/">See all services</a></p>
+        </div>
+        <div class="frame frame--photo frame--fill span-6 start-7">
+          <img class="frame__img" data-peek-for="social" src="assets/img/photo-f166956983-960.webp" srcset="assets/img/photo-f166956983-500.webp 500w, assets/img/photo-f166956983-960.webp 960w, assets/img/photo-f166956983-1440.webp 1440w" sizes="(max-width: 1023px) 100vw, 70vw" width="960" height="720" alt="Outrigger boats on Panglao sand at sunset" data-source="stand-in" data-subject="stand-in">
+          <img class="frame__img" data-peek-for="web" src="assets/img/photo-f68305589-960.webp" srcset="assets/img/photo-f68305589-500.webp 500w, assets/img/photo-f68305589-960.webp 960w, assets/img/photo-f68305589-1440.webp 1440w" sizes="(max-width: 1023px) 100vw, 70vw" width="960" height="640" alt="A long bamboo house with a thatched roof among trees" hidden data-source="stand-in" data-subject="stand-in">
+          <img class="frame__img" data-peek-for="search" src="assets/img/photo-f129074997-960.webp" srcset="assets/img/photo-f129074997-500.webp 500w, assets/img/photo-f129074997-960.webp 960w, assets/img/photo-f129074997.webp 1280w, assets/img/photo-f129074997-1440.webp 1440w" sizes="(max-width: 1023px) 100vw, 70vw" width="1280" height="960" alt="The Panglao coastline and Alona Beach seen from the air" hidden data-source="stand-in" data-subject="stand-in">
+          <img class="frame__img" data-peek-for="auto" src="assets/img/photo-f725343-960.webp" srcset="assets/img/photo-f725343-500.webp 500w, assets/img/photo-f725343-960.webp 960w" sizes="(max-width: 1023px) 100vw, 70vw" width="960" height="720" alt="A tricycle taxi parked on a village road in Panglao" hidden data-source="stand-in" data-subject="stand-in">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statement" id="approach" data-moment="word-highlight" aria-label="How we start">
+    <div class="wrap">
+      <p class="t-label">How we start</p>
+      <p class="mo-wh__text">No bloated retainers. We find where your customers cannot see you today, build the smallest fix that makes a <strong>measurable difference</strong>, then keep what brings inquiries and drop what does not.</p>
+    </div>
+  </section>
+
+  <section class="section" id="process" style="--h: 2; --hm: 1" data-moment="pinned-chapters" aria-labelledby="process-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="process-h">How a project runs, in three steps</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Step 1: find the gaps</h3>
+            <p>We look at how your customers search, compare and decide, and where your business is invisible today.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/photo-f61429330.webp" srcset="assets/img/photo-f61429330-500.webp 500w, assets/img/photo-f61429330-960.webp 960w, assets/img/photo-f61429330.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="The green Panglao shoreline seen across clear shallow water" width="1280" height="853" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Step 2: build the essentials</h3>
+            <p>Content, a site and listings that fit how you run the business: small enough to keep up, strong enough to matter.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/photo-f117961878.webp" srcset="assets/img/photo-f117961878-500.webp 500w, assets/img/photo-f117961878-960.webp 960w, assets/img/photo-f117961878.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="A white outrigger bangka pulled up on a sandy beach" width="1280" height="853" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Step 3: grow what works</h3>
+            <p>We track which posts and pages bring real inquiries, keep those, and drop the rest.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/photo-f25403038-960.webp" srcset="assets/img/photo-f25403038-500.webp 500w, assets/img/photo-f25403038-960.webp 960w" sizes="(max-width: 1023px) 100vw, 50vw" alt="Rows of grassy rounded hills in the Bohol countryside" width="960" height="722" loading="lazy" data-source="stand-in" data-subject="stand-in"></figure>
+          </li>
+        </ol>
+      </div>
+      <div class="mo-pc__visuals frame"></div>
+    </div>
+  </section>
+
+  <section class="section" id="packages" style="--hm: 2" aria-labelledby="packages-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-5 stack-5">
+          <div class="section-head">
+            <h2 id="packages-h">Packages and pricing</h2>
+            <p>Every price is quoted after a short call about your business. An inquiry is never a payment.</p>
+          </div>
+          <p><a class="link" href="services/">See all services</a></p>
+        </div>
+        <ul class="rows plans span-6 start-7">
+          <li class="stack-4">
+            <span class="rows__name">Visibility Starter</span><span class="rows__value">Price on request</span>
+            <p>The best first step: a one-time package for a business that needs to be findable and contactable online, fast.</p>
+            <ul class="checks">
+              <li>A one-page website</li>
+              <li>Business profile cleanup</li>
+              <li>A 30-day content plan</li>
+            </ul>
+            <p><a class="link" href="#start">Request a Starter quote</a></p>
+          </li>
+          <li class="stack-4">
+            <span class="rows__name">Growth Partnership</span><span class="rows__value">Price on request</span>
+            <p>Our most requested retainer: ongoing social, web and visibility work with a monthly plan and reporting.</p>
+            <ul class="checks">
+              <li>Monthly content and campaigns</li>
+              <li>Website upkeep</li>
+              <li>Search and AI visibility tracking</li>
+            </ul>
+            <p><a class="link" href="#start">Request a Partnership quote</a></p>
+          </li>
+          <li class="stack-4">
+            <span class="rows__name">Single services</span><span class="rows__value">Price on request</span>
+            <p>Any of the four services on its own: social media, a website, AI search or one automation.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ground-inverse g2m" id="team" aria-labelledby="team-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5 stack-6">
+          <div class="section-head">
+            <h2 id="team-h">The team in Panglao. <span class="muted">Strategy, delivery and code in one room.</span></h2>
+          </div>
+          <ul class="rows">
+            <li><span class="rows__name">Jedediah</span><span class="rows__value">CEO</span><p>Runs client relationships, project timelines and SEO strategy.</p></li>
+            <li><span class="rows__name">Ralph</span><span class="rows__value">Strategy</span><p>Leads market research, data analysis and strategic advice.</p></li>
+            <li><span class="rows__name">Jerico</span><span class="rows__value">Technology</span><p>Builds the websites, from front end to back end and user experience.</p></li>
+          </ul>
+          <p><a class="link" href="about/">Meet the team</a></p>
+        </div>
+        <div class="frame frame--photo frame--fill span-6 start-7">
+          <img class="frame__img" src="assets/img/photo-f70361384.webp" srcset="assets/img/photo-f70361384-500.webp 500w, assets/img/photo-f70361384-960.webp 960w, assets/img/photo-f70361384.webp 1280w, assets/img/photo-f70361384-1440.webp 1440w" sizes="(max-width: 639px) 1060px, (max-width: 1023px) 100vw, 75vw" width="1280" height="853" alt="A shady tree on a white beach beside turquoise water off Panglao" loading="lazy" data-source="stand-in" data-subject="stand-in">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section g2m" id="start" aria-labelledby="start-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5 stack-5">
+          <div class="section-head">
+            <h2 id="start-h">Start a project with Apex Trio</h2>
+            <p>Tell us what you sell and where you want to be found. We usually reply within one business day.</p>
+          </div>
+          <p class="t-small">Panglao, Bohol, Philippines &nbsp; <a class="link" href="https://www.openstreetmap.org/search?query=Panglao%20Bohol">See the area</a></p>
+          <div class="frame frame--photo split-photo">
+            <img class="frame__img" src="assets/img/photo-f764192.webp" srcset="assets/img/photo-f764192-500.webp 500w, assets/img/photo-f764192-960.webp 960w, assets/img/photo-f764192.webp 1280w" sizes="(max-width: 639px) 600px, (max-width: 1023px) 100vw, 40vw" width="1280" height="925" alt="A coconut palm leaning over Alona Beach" loading="lazy" data-source="stand-in" data-subject="stand-in">
+          </div>
+        </div>
+        <div class="span-6 start-7">
+          <form class="form" action="/api/contact" method="post" data-endpoint="/api/contact" data-sent="Your project request is in. We usually reply within one business day." novalidate>
+            <div class="field"><label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+              <p class="field__error" id="f-name-err" hidden>Write your name so we know who to answer.</p></div>
+            <div class="field"><label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+              <p class="field__error" id="f-email-err" hidden>Write an email address with an @, like name@business.ph.</p></div>
+            <div class="field"><label for="f-phone">Phone or WhatsApp</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="f-business">Business name</label>
+              <input id="f-business" name="business" type="text" autocomplete="organization"></div>
+            <div class="field field--full"><label for="f-service">What you need</label>
+              <select id="f-service" name="service">
+                <option>Not sure yet</option>
+                <option>Social media marketing</option>
+                <option>Website design and development</option>
+                <option>AI search and visibility</option>
+                <option>Automation and integrations</option>
+                <option>Visibility Starter package</option>
+                <option>Growth Partnership retainer</option>
+              </select></div>
+            <div class="field field--full"><label for="f-message">About your business</label>
+              <textarea id="f-message" name="message" rows="4" required aria-describedby="f-message-err"></textarea>
+              <p class="field__error" id="f-message-err" hidden>Write a line about your business and what you want to change.</p></div>
+            <div class="btn-row"><button class="btn btn--primary" type="submit">Start a project</button></div>
+            <p class="form__status" role="status" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing g2m" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Get found. Get chosen. Grow together.</h2>
+        <p>Panglao first, then the rest of Bohol and beyond.</p>
+      </div>
+      <a class="btn btn--primary btn--xl" href="#start">Start a project<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark mark--initial" aria-hidden="true">A</span>Apex Trio</a>
+          <p class="footer__lede">Social media, web and AI-search studio in Panglao, Bohol.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Services</h3><ul>
+          <li><a href="services/social-media-marketing/">Social media</a></li>
+          <li><a href="services/website-design-development/">Websites</a></li>
+          <li><a href="services/ai-search-digital-visibility/">AI search</a></li>
+          <li><a href="services/automation-integrations/">Automation</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Studio</h3><ul>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="about/">About</a></li>
+          <li><a href="work/">Work</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Follow</h3><ul>
+          <li><a href="https://www.facebook.com/profile.php?id=61596209823382" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/apex_tdp" rel="noopener">Instagram</a></li>
+          <li><a href="contact/">Contact</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Newsletter</h3>
+          <form class="form form--inline" action="/api/subscribe" method="post" data-endpoint="/api/subscribe" data-sent="You are on the list. Expect a few notes a year." novalidate>
+            <div class="field field--full"><label for="n-email">Email for tips</label>
+              <input id="n-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="n-email-err">
+              <p class="field__error" id="n-email-err" hidden>Write an email address with an @.</p></div>
+            <div class="btn-row"><button class="btn btn--secondary" type="submit">Subscribe</button></div>
+            <p class="form__status" role="status" data-form-status></p>
+          </form></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Apex Trio Digital Partners &nbsp; <a href="privacy/">Privacy</a></span>
+        <div class="socials"></div>
+        <a class="credits" href="credits/">Photographs via Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>

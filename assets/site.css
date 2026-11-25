@@ -1,0 +1,22 @@
+/* Apex Trio page CSS shared by every page (the kit in assets/ stays untouched; tokens below are the dealt palette) */
+:root {
+  --p-bg: #e6dbc7; --p-surface: #ddd0b9; --p-ink: #062b8a; --p-muted: #3253a4;
+  --p-accent: #062b8a; --p-accent-ink: #e6dbc7; --p-action: #062b8a; --p-action-ink: #e6dbc7;
+  --p-inv-bg: #062b8a; --p-inv-surface: #153a90; --p-inv-ink: #e6dbc7; --p-inv-muted: #aab0bc;
+  --p-inv-accent: #e6dbc7; --p-inv-accent-ink: #062b8a; --p-inv-action: #e6dbc7; --p-inv-action-ink: #062b8a;
+  --font-display: "Hanken Grotesk", system-ui, sans-serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.038em;
+}
+.ground-inverse .rows__name { color: var(--ink); }
+.measure h2 { font-size: var(--t-h3); margin-top: var(--s-6); }
+/* splits on a phone grow with what they hold; the photograph keeps a 4:3 frame under the words */
+@media (max-width: 639px) {
+  main > section > .wrap > .grid.fill { flex: none; height: auto; }
+  main > section .grid.fill > .frame--fill { flex: none; height: auto; aspect-ratio: 4 / 3; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .closing__cta.close--type > .btn--xl:not(.btn--wide) { width: 100%; }
+}

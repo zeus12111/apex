@@ -1,0 +1,6 @@
+# Old Base44 URLs -> new pages (keeps existing links and search results working)
+/offerings      /#packages   301
+/offerings/     /#packages   301
+/testimonials   /work/       301
+/testimonials/  /work/       301
+/admin/*        /            302
