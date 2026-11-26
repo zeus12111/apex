@@ -1,0 +1,83 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-26T07:31:21.362Z",
+        "reason": "Apex Trio Brand Kit v1 p.8 mandates Geist for body text"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist mono",
+        "createdAt": "2026-11-26T07:31:21.369Z",
+        "reason": "Apex Trio Brand Kit v1 p.8 mandates Geist Mono for labels"
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T07:31:26.229Z",
+        "reason": "Apex Trio Brand Kit v1 p.3: founder cards carry a coloured top bar on a rounded card"
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "assets/site.css"
+        ],
+        "createdAt": "2026-11-26T07:31:26.236Z",
+        "reason": "Apex Trio Brand Kit v1 p.3: founder cards carry a coloured top bar on a rounded card"
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "about/index.html"
+        ],
+        "createdAt": "2026-11-26T07:31:26.243Z",
+        "reason": "Apex Trio Brand Kit v1 p.3: founder cards carry a coloured top bar on a rounded card"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "assets/site.css"
+        ],
+        "createdAt": "2026-11-26T07:31:26.250Z",
+        "reason": "Apex Trio Brand Kit v1 p.7: Apex Paper #F5F3EC is a core brand colour"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T07:31:26.257Z",
+        "reason": "Apex Trio Brand Kit v1 p.7: Apex Paper #F5F3EC is a core brand colour"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T07:31:26.263Z",
+        "reason": "Rule .ly-live lives in the vendored kit file assets/layout/layout.css; no element on this page uses it"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T07:31:26.271Z",
+        "reason": "Gradient lives in the vendored kit CSS for a hero type this page does not use; no halo renders"
+      }
+    ]
+  }
+}
