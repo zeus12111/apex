@@ -46,7 +46,10 @@ Until these are set, the form shows "Not sent" and keeps what the visitor typed;
 ## Editing
 
 - **Text:** edit the HTML file for that page directly.
-- **Colours and fonts:** the palette tokens sit at the top of `assets/site.css` (and in the `<style>` block of `index.html`). Sand `#e6dbc7`, navy `#062b8a`, font Hanken Grotesk.
+- **Brand:** follows the Apex Trio Brand Kit v1 (November 2026). Colours, fonts, buttons, chips and founder cards live in `assets/site.css`:
+  Ink `#0F1222`, Paper `#F5F3EC`, Volt `#C8F94A` (one highlight per layout), Sunset `#FF5B2E` (buttons, the apex dot), Tide `#12B5A5`.
+  Type: Montserrat Alternates Bold (headlines), Geist (body), Geist Mono (uppercase labels), all from Google Fonts.
+- **Logo files:** `assets/brand/`, lifted as vectors from the brand kit PDF: `logo-light.svg` / `logo-dark.svg` (with "Digital Partners"), `-short` versions without it, and `mark-light.svg`, `mark-dark.svg`, `mark-trio.svg`. The favicon is the Ink avatar. Icons are Phosphor Bold (`assets/brand/icons/`).
 - **Photographs:** in `assets/img/`. They are licensed stand-ins of Panglao and Bohol from Wikimedia Commons (credits at `/credits/`). Replace them with your own photos of your team and client work when you have them, and keep the credits page in step.
 - `assets/` also holds the design system (`system.css`, `system.js`, motion, layout and two scroll moments). Edit page-level CSS, not these files.
 

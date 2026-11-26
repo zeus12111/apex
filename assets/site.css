@@ -1,17 +1,108 @@
-/* Apex Trio page CSS shared by every page (the kit in assets/ stays untouched; tokens below are the dealt palette) */
+/* ==========================================================================
+   Apex Trio brand layer (Brand Kit v1, November 2026).
+   Loaded after the kit's system.css on every page; the kit files stay untouched.
+   Colour: Ink #0F1222 (45%) · Paper #F5F3EC (35%) · Volt #C8F94A (10%) · Sunset #FF5B2E (7%) · Tide #12B5A5 (3%)
+   Type: Montserrat Alternates Bold (display) · Geist (body) · Geist Mono (labels, uppercase)
+   ========================================================================== */
 :root {
-  --p-bg: #e6dbc7; --p-surface: #ddd0b9; --p-ink: #062b8a; --p-muted: #3253a4;
-  --p-accent: #062b8a; --p-accent-ink: #e6dbc7; --p-action: #062b8a; --p-action-ink: #e6dbc7;
-  --p-inv-bg: #062b8a; --p-inv-surface: #153a90; --p-inv-ink: #e6dbc7; --p-inv-muted: #aab0bc;
-  --p-inv-accent: #e6dbc7; --p-inv-accent-ink: #062b8a; --p-inv-action: #e6dbc7; --p-inv-action-ink: #062b8a;
-  --font-display: "Hanken Grotesk", system-ui, sans-serif;
-  --font-text: "Hanken Grotesk", system-ui, sans-serif;
-  --display-weight: 400;
-  --display-tracking: -0.03em;
-  --display-tracking-xl: -0.038em;
+  --brand-ink: #0F1222; --brand-paper: #F5F3EC; --brand-volt: #C8F94A; --brand-sunset: #FF5B2E; --brand-tide: #12B5A5;
+  --brand-ink-2: #1B1F33;            /* cards on Ink */
+  --brand-orange-on-paper: #C2370A;  /* orange text on Paper */
+  --brand-orange-on-ink: #FF7A52;    /* orange text on Ink */
+
+  --p-bg: var(--brand-paper); --p-surface: #FFFFFF; --p-ink: var(--brand-ink); --p-muted: #4A4F60;
+  --p-accent: var(--brand-sunset); --p-accent-ink: var(--brand-ink);
+  --p-action: var(--brand-sunset); --p-action-ink: var(--brand-ink);
+  --p-inv-bg: var(--brand-ink); --p-inv-surface: var(--brand-ink-2); --p-inv-ink: var(--brand-paper); --p-inv-muted: #A6AABB;
+  --p-inv-accent: var(--brand-volt); --p-inv-accent-ink: var(--brand-ink);
+  --p-inv-action: var(--brand-sunset); --p-inv-action-ink: var(--brand-ink);
+
+  --font-display: "Montserrat Alternates", "Geist", system-ui, sans-serif;
+  --font-text: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --display-weight: 700;
+  --display-tracking: -0.025em;
+  --display-tracking-xl: -0.035em;
+
+  /* pills and discs: buttons are pills, cards 24px */
+  --r-btn: 999px; --r-lg: 24px; --r-md: 16px; --r-sm: 10px;
+  --sticker: 4px 4px 0 var(--brand-ink);
+  --label-ink: var(--brand-orange-on-paper);
 }
+.ground-inverse, .footer.closing { --label-ink: var(--brand-orange-on-ink); }
+
+/* ---------------------------------------------------------------- type */
+body { font-family: var(--font-text); }
+h1, h2, .t-stat, .footer__lede { font-family: var(--font-display); font-weight: 700; }
+h3 { font-family: var(--font-text); font-weight: 600; }
+/* techy labels: Geist Mono, uppercase, tracked (eyebrows, chips, data labels only) */
+.t-label, .eyebrow { font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--label-ink); }
+.muted.t-label { color: var(--muted); }
+
+/* the one Volt highlight per layout: the word that matters */
+.hl { background: var(--brand-volt); color: var(--brand-ink); padding: 0 0.14em; border-radius: 6px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* ---------------------------------------------------------------- logo */
+.brand-logo { display: inline-flex; align-items: center; line-height: 0; }
+.brand-logo img { display: block; height: 30px; width: auto; }
+.footer .brand-logo img { height: 40px; }
+@media (max-width: 639px) { .brand-logo img { height: 26px; } }
+
+/* ---------------------------------------------------------------- buttons */
+.btn { font-weight: 600; }
+.btn--primary { background: var(--brand-sunset); color: var(--brand-ink); border-color: var(--brand-sunset); }
+.btn--secondary { background: transparent; color: var(--ink); border: 1.5px solid currentColor; }
+.btn--volt { background: var(--brand-volt); color: var(--brand-ink); border-color: var(--brand-volt); box-shadow: var(--sticker); }
+.ground-inverse .btn--secondary, .hero--ink .btn--secondary { color: var(--brand-paper); }
+
+/* ---------------------------------------------------------------- chips: pill + dot */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chip { display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 12px; border-radius: 999px;
+  font: 500 12px/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; }
+.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.chip--volt { background: var(--brand-volt); color: var(--brand-ink); }
+.chip--ink { background: var(--brand-ink); color: var(--brand-paper); }
+.chip--sunset { background: var(--brand-sunset); color: var(--brand-ink); }
+.chip--tide { background: var(--brand-tide); color: var(--brand-ink); }
+.chip--line { border: 1px solid currentColor; }
+
+/* ---------------------------------------------------------------- cards: white, hairline, 24px */
+.card { border-radius: var(--r-lg); }
+.b-card { background: var(--surface); border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius: var(--r-lg); padding: 32px; }
+.b-card--sticker { box-shadow: var(--sticker); border-color: var(--brand-ink); }
+.frame--photo { border-radius: var(--r-lg); }
+
+/* ---------------------------------------------------------------- the mark pattern on Ink */
+.mark-pattern { position: relative; isolation: isolate; }
+.mark-pattern::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%231B1F33' stroke-width='13' stroke-linecap='round'%3E%3Cpath d='M62 112 74 82M98 112 86 82'/%3E%3C/g%3E%3Ccircle cx='80' cy='62' r='8' fill='%231B1F33'/%3E%3C/svg%3E");
+  background-size: 160px 160px; }
+
+/* ---------------------------------------------------------------- the Ink hero */
+.hero--ink { background: var(--brand-ink); color: var(--brand-paper);
+  --bg: var(--brand-ink); --ink: var(--brand-paper); --muted: #A6AABB; --label-ink: var(--brand-orange-on-ink); }
+.hero--ink h1 { color: var(--brand-paper); }
+.hero-disc { position: relative; width: 100%; max-width: 560px; aspect-ratio: 1; margin-left: auto; border-radius: 50%; background: var(--brand-volt);
+  display: grid; place-items: center; }
+.hero-disc img { width: 42%; height: auto; }
+
+/* ---------------------------------------------------------------- founders (kit page 3) */
+.founder { display: flex; flex-direction: column; gap: 14px; background: var(--brand-ink-2); color: var(--brand-paper); border-radius: var(--r-lg);
+  padding: 32px 28px 28px; border-top: 10px solid var(--founder, var(--brand-volt)); }
+.founder h3 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; color: var(--brand-paper); }
+.founder__role { font-weight: 600; color: var(--founder); margin: 0; }
+.founder__sub { font-size: 14px; color: #A6AABB; margin: 0; }
+.founder ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.founder__foot { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(245,243,236,.12); }
+.founder__foot .t-label { color: var(--founder); }
+.founder--sunset { --founder: var(--brand-orange-on-ink); border-top-color: var(--brand-sunset); }
+.founder--volt { --founder: var(--brand-volt); }
+.founder--tide { --founder: var(--brand-tide); }
+
+/* rows on dark read in paper */
 .ground-inverse .rows__name { color: var(--ink); }
 .measure h2 { font-size: var(--t-h3); margin-top: var(--s-6); }
+
 /* splits on a phone grow with what they hold; the photograph keeps a 4:3 frame under the words */
 @media (max-width: 639px) {
   main > section > .wrap > .grid.fill { flex: none; height: auto; }
@@ -20,3 +111,33 @@
 @media (min-width: 640px) and (max-width: 1023px) {
   .closing__cta.close--type > .btn--xl:not(.btn--wide) { width: 100%; }
 }
+
+/* ---------------------------------------------------------------- fixes over the kit's defaults */
+html[data-buttons] { --r-btn: 999px; }
+h1, h2, h3 { hyphens: manual; -webkit-hyphens: manual; }
+.section-head > .t-label, .section-head .t-label, .mo-pc__text > .t-label, .statement .t-label { font-size: 12px; line-height: 1.4; font-weight: 500; letter-spacing: 0.12em; color: var(--label-ink); max-width: none; margin: 0; }
+.ground-inverse .section-head .t-label.muted, .founder .t-label.muted { color: #A6AABB; }
+.founder ul { list-style: disc; }
+.founder ul li::marker { color: var(--founder); }
+
+/* icon discs (Phosphor Bold, per the kit) */
+.icon-disc { flex: none; display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; color: var(--brand-ink); }
+.icon-disc svg { width: 26px; height: 26px; }
+.icon-disc--volt { background: var(--brand-volt); }
+.icon-disc--sunset { background: var(--brand-sunset); }
+.icon-disc--tide { background: var(--brand-tide); }
+.b-card__top, .founder__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.founder__top .icon-disc { width: 44px; height: 44px; } .founder__top .icon-disc svg { width: 22px; height: 22px; }
+
+/* focus: an Ink ring on Paper, a Paper ring on Ink (3:1 or more on both) */
+:focus-visible { outline: 2px solid var(--ink) !important; outline-offset: 3px; }
+.footer .form .btn { width: 100%; }
+/* the smallest phones: the logo, the menu and the hero's own button are enough */
+@media (max-width: 379px) { header.nav .nav__bar > .nav__actions { display: none !important; } }
+
+/* shared by every page with founders or a statement */
+.founders { margin-top: var(--s-7); }
+@media (max-width: 1023px) { .founders > * { grid-column: 1 / -1; } }
+@media (min-width: 640px) and (max-width: 1023px) { .founder ul { display: none; } }
+@media (max-width: 639px) { .founder h3 { font-size: 26px; } .founder__sub { display: none; } }
+.statement .mo-wh__text { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }

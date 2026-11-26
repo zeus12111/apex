@@ -34,9 +34,11 @@ Offerings: Visibility Starter (package: one-page website, business profile clean
 
 ## Brand Commitments
 
+Binding: the Apex Trio Brand Kit v1 (November 2026). Mark: two leaning legs and an apex dot (three founders, one peak); Sunset dot on light, Volt dot on dark. Colour: Ink #0F1222 45%, Paper #F5F3EC 35%, Volt #C8F94A 10% (the shout: one block per layout, always with Ink text), Sunset #FF5B2E 7% (action colour: buttons, the apex dot), Tide #12B5A5 3%; orange text #C2370A on Paper, #FF7A52 on Ink; never pure black or white. Type: Montserrat Alternates Bold display, Geist body, Geist Mono uppercase labels. Shapes: pills and discs, 24px cards with hairlines, one hard sticker shadow per layout, Phosphor Bold icons. Voice: "the smart friend who runs your marketing": short sentences, numbers over adjectives, leads and enquiries not likes, sentence case, no "synergy, leverage, elevate". Main call to action: "Get your free audit". Real Bohol photos, no generic stock. Founder spelling: Jericho.
+
 Name: Apex Trio Digital Partners ("APEX TRIO / DIGITAL PARTNERS"). Tagline: "Get found. Get chosen. Grow together." Line: "Panglao first, then scale." Values: Clarity over clutter; Local roots, modern standards; Proof, not promises. Voice: plain, direct, local, no hype.
 
-Team: Jedediah (she), Chief Executive Officer & Operations Lead, Account Director / SEO Strategist. Ralph (he), Chief Strategy Officer & Principal Consultant, Strategy Consultant / SEO Analyst. Jerico (he), Chief Technology Officer & Lead Developer, Head of Web Development.
+Team: Jedediah (she), Chief Executive Officer & Operations Lead, Account Director / SEO Strategist. Ralph (he), Chief Strategy Officer & Principal Consultant, Strategy Consultant / SEO Analyst. Jericho (he), Chief Technology Officer & Lead Developer, Head of Web Development.
 
 Socials: Facebook https://www.facebook.com/profile.php?id=61596209823382, Instagram https://www.instagram.com/apex_tdp
 
